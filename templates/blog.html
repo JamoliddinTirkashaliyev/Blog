@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/blog.css">
+    <title>Blog</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row navbar"
+         style=" position:fixed;   background-color: white; left:0px; padding:1 0px 250px; width:100%; margin-top: 10px ">
+        <div class="col-12 col-md-6 col-sm-6 navbar-icon"><a href="/">Jamoliddin's Blog</a></div>
+        <div class="col-12 col-md-6 col-sm-6 navbar-link">
+            <div><a href="/about/">About</a></div>
+            <div><a href="/blog/">Blog</a></div>
+            <div><a href="https://t.me/+R98WgdAnEww1ZTFi">Telegram</a></div>
+        </div>
+    </div>
+    <div style="padding-top:100px" class="row blog">
+        <div class="col-12">
+            <h1>Blog</h1>
+        </div>
+    </div>
+    <div class="row main" style="text-align: center;">
+        <div class="col-12 col-md-6 col-sm-6 main-card1"
+             style="width: 80%; height: auto; margin:0px auto; padding:0px 250px;  ">
+            {%for year in years%}
+                <p>{{year}}</p>
+                {%for month in months%}
+                {% if year in month%}
+                <h3>{{month|slice:"4:"}}</h3>
+                {%for article in articles %}
+                <div class="main-card1-link">
+                    <a href="/maqola/"><h6>{{article.date}}</h6> <h5>{{article.title}}</h5></a>
+                </div>
+                {%endfor%}
+                {%endif%}
+                {%endfor%}
+                {%endfor%}
+            </div>
+            </div>
+        </div>
+        <div class="row footer" style="text-align: center;">
+            <p style="width: 80%; height: auto; margin:100px auto; padding:0px 250px;">© 2024 jamoliddin.com</p>
+        </div>
+    </div>
+</body>
+</html>

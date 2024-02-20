@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid .navbar {
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.container-fluid .navbar .navbar-icon a {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.container-fluid .navbar .navbar-link {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-fluid .navbar .navbar-link a {
+  text-decoration: none;
+  margin-left: 50px;
+  color: grey;
+}
+
+.container-fluid .aboutme {
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #FAFAFC;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 10px 0px;
+}
+
+.container-fluid .aboutme .col-12 h1 {
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+}
+
+.container-fluid .main {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 50px;
+  font-size: 19px;
+}
+
+.container-fluid .main img {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.container-fluid .main h5 {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: normal;
+}
+
+.container-fluid .main a {
+  text-decoration: none;
+}
+
+.container-fluid .footer {
+  margin-top: 20vh;
+  text-align: center;
+}
