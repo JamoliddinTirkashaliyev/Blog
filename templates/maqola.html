@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
-    <title>Maqola 1</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="stylesheet" href="/static/bootstrap-5.0.2-dist/css/bootstrap.css">
+    {%for t in title%}
+    <title>{{t.article.title}}</title>
+    {%endfor%}
 </head>
 <body>
     <div class="container">
-        <h1>2021 June</h1>
+        {%for t in sana%}
+        <h1>{{t.date|slice:":3"}}</h1>
+        {%endfor%}
         <div class="row">
+            {%for t in title%}
             <div class="col-12">
-                <img src="./photo/05-Medical-Coder-1265022338-1.jpg" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam delectus quo enim temporibus unde necessitatibus? Laborum voluptatum iusto rem optio itaque, officia minima exercitationem, labore id excepturi nesciunt maiores voluptates sunt accusamus quo! Animi nulla dolorum totam hic recusandae cumque inventore officiis sed amet beatae quasi neque nam nostrum aliquid alias fugit, molestiae quae ea id, dicta adipisci consequatur magni, voluptatem pariatur. Beatae odit sint cum maiores eum facilis laudantium inventore voluptate esse eius? Earum cum nihil laborum magnam sapiente voluptatum eum maxime optio officiis accusantium sed, dolor iusto consequatur voluptas deserunt, asperiores, illo voluptatibus iure harum? Exercitationem, autem corporis?</p>
+                <img src="{{t.image.url}}" alt="Bu yerda rasm bor">
+                <p>{{t.text}}</p>
+                <a href="/{{t.id}}/delete/"><button type="submit">Delete</button></a>
+                <a href="#"><button type="submit">Edit</button></a>
             </div>
-            <div class="col-12">
-                <img src="./photo/Characteristics-of-a-Coder-800x499.jpg" alt="">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam delectus quo enim temporibus unde necessitatibus? Laborum voluptatum iusto rem optio itaque, officia minima exercitationem, labore id excepturi nesciunt maiores voluptates sunt accusamus quo! Animi nulla dolorum totam hic recusandae cumque inventore officiis sed amet beatae quasi neque nam nostrum aliquid alias fugit, molestiae quae ea id, dicta adipisci consequatur magni, voluptatem pariatur. Beatae odit sint cum maiores eum facilis laudantium inventore voluptate esse eius? Earum cum nihil laborum magnam sapiente voluptatum eum maxime optio officiis accusantium sed, dolor iusto consequatur voluptas deserunt, asperiores, illo voluptatibus iure harum? Exercitationem, autem corporis?</p>
-            </div>
+            {%endfor%}
         </div>
         <div class="row footer">
-            <p>© 2024 <jamoliddin>  </jamoliddin>.com</p>
+            <p>© 2024 Asilbek.com</p>
         </div>
     </div>
 </body>

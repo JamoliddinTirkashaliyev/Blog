@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container-fluid">
-     <div class="row navbar  "
+    <div class="row navbar  "
          style=" position:fixed;   background-color: white; left:0px; padding:10px 250px; width:100%;">
         <div class="col-12 col-md-6 col-sm-6 navbar-icon"><a href="/">Jamoliddin's Blog</a></div>
         <div class="col-12 col-md-6 col-sm-6 navbar-link">
@@ -28,26 +28,28 @@
     </div>
     <div class="row main" style="text-align: center;">
         <div class="col-12 col-md-6 col-sm-6 main-card1"
-             style="width: 80%; height: auto; margin:0px auto; padding:0px 250px;  ">
-            {%for year in years%}
+        style="width: 80%; height: auto; margin:0px auto; padding:0px 250px;  ">
+
+                {%for year in years%}
                 <p>{{year}}</p>
                 {%for month in months%}
                 {% if year in month%}
                 <h3>{{month|slice:"4:"}}</h3>
-                {%for article in articles %}
+                {%for title in titles%}
                 <div class="main-card1-link">
-                    <a href="/maqola/"><h6>{{article.date}}</h6> <h5>{{article.title}}</h5></a>
+                    <a href="/{{title.title}}/maqola/"><h6>{{title.date}}</h6> <h5>{{title.title}}</h5></a>
                 </div>
                 {%endfor%}
                 {%endif%}
                 {%endfor%}
                 {%endfor%}
             </div>
-            </div>
-        </div>
-        <div class="row footer" style="text-align: center;">
-            <p style="width: 80%; height: auto; margin:100px auto; padding:0px 250px;">© 2024 jamoliddin.com</p>
-        </div>
+            <div class="col-12 col-md-6 col-sm-6 main-card2">
     </div>
+</div>
+<div class="row footer" style="text-align: center;">
+    <p style="width: 80%; height: auto; margin:100px auto; padding:0px 250px;">© 2024 jamoliddin.com</p>
+</div>
+</div>
 </body>
 </html>
